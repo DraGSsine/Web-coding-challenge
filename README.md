@@ -1,24 +1,62 @@
-# Web Coding Challenge (full stack)
+# To-Do List
 
-## Don't use AI 🚨
-If you want to risk using it, use it in a clever way that make your code clean and readable 
+A simple to-do list application built with Next.js for the frontend, Express.js for the backend, and MongoDB Atlas for database storage.
 
-## Idea of the App 
-Build a simple "To-Do List" application with an admin panel.  This app will allow users to manage a list of tasks. 
-The admin panel will provide the interface to create, read, update, and delete (CRUD operations) these tasks.  
-Each task should have a title (required) and a completion status (e.g., "Pending" or "Completed").
+## Features
+- Add, update, and delete tasks
+- Mark tasks as completed
+- Persistent data storage using MongoDB Atlas
 
-## Technologies to Use
+## Tech Stack
+- **Frontend:** Next.js (React)
+- **Backend:** Express.js (Node.js)
+- **Database:** MongoDB Atlas
 
-*   **MERN Stack:**
-    *   **MongoDB:** The database to store product data.  Consider using MongoDB Atlas for easy setup.
-    *   **Express.js:** The back-end framework for creating the API endpoints.
-    *   **React.js:** The front-end JavaScript library for building the user interface.
-    *   **Node.js:** The JavaScript runtime environment.
+## Setup Instructions
 
-## Deliverables
+### Prerequisites
+.env
 
-1.  **Forked Repository:** Fork this repository , and complete the challenge within their forked copy.
-2.  **Completed Code:**  The forked repository should contain the complete and functional project code.
-3.  **README Instructions:** A short README file Include small instructions .
-4.  **Reflection:** A brief (1 paragraph) written reflection on any challenges you faced . This should be included in the README
+### Installation
+
+1. **Clone the repository:**
+   ```sh
+   clone the repo
+   cd todo-list
+   ```
+
+2. **Install dependencies:**
+   ```sh
+   npm install
+   ```
+
+3. **Set up environment variables:**
+   Create a `.env` file in the root directory and add:
+   ```env
+   MONGODB_URI=your_mongodb_atlas_connection_string
+   ```
+
+4. **Run the backend server:**
+   ```sh
+   cd backend
+   node server.js
+   ```
+   The backend will run on `http://localhost:9090`
+
+5. **Run the frontend:**
+   ```sh
+   cd frontend
+   npm run dev
+   ```
+   The frontend will run on `http://localhost:3000`
+
+## API Endpoints
+| Method | Endpoint     | Description            |
+|--------|-------------|------------------------|
+| GET    | `/tasks`    | Fetch all tasks        |
+| POST   | `/tasks`    | Add a new task         |
+| PUT    | `/tasks/:id` | Update a task         |
+| DELETE | `/tasks/:id` | Delete a task         |
+
+## License
+This project is licensed under the MIT License.
