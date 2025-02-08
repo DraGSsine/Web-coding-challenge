@@ -57,6 +57,3 @@ A simple to-do list application built with Next.js for the frontend, Express.js 
 | POST   | `/tasks`    | Add a new task         |
 | PUT    | `/tasks/:id` | Update a task         |
 | DELETE | `/tasks/:id` | Delete a task         |
-
-## License
-This project is licensed under the MIT License.
